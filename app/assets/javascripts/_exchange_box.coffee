@@ -10,12 +10,12 @@ $(document).ready ->
           type: 'POST'
           dataType: 'json'
           data: {
-                  currency: currency,
-                  currency_destination: currency_destination,
-                  quantity: quantity
-                }
+            currency: currency,
+            currency_destination: currency_destination,
+            quantity: quantity
+          }
           error: (jqXHR, textStatus, errorThrown) ->
             alert textStatus
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
-      return false;
+      return false
