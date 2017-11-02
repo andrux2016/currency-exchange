@@ -1,4 +1,4 @@
-<div class="exchange_box">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 exchange_box">
   <div class="card">
     <div class="card-header text-center">
       Enter the amount you wish to convert
@@ -7,17 +7,13 @@
       <%= form_tag("/exchange", method: "post", id: "exchange_form") do %>
         <div class="currency_selection">
           <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <p class="title">Your Currency</p>
-                <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
-              </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
+              <p class="title">Your Currency</p>
+              <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
             </div>
-            <div class="col-6">
-              <div class="form-group">
-                <p class="title">Desired Currency</p>
-                <%= select_tag "currency_destination", options_for_select(currency_select, "USD"), class: "form-control", id: "currency_destination"%>
-              </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-group">
+              <p class="title">Desired Currency</p>
+              <%= select_tag "currency_destination", options_for_select(currency_select, "USD"), class: "form-control", id: "currency_destination"%>
             </div>
           </div>
         </div>
