@@ -22,3 +22,9 @@ $(document).ready ->
       $('#result').val(quantity)
     else
       trigger_conversion_request()
+  
+  $('.switch-currency-btn').click ->
+    current_currency = $('#currency').val()
+    $('#currency').val($('#currency_destination').val())
+    $('#currency_destination').val(current_currency)
+    $('#currency, #currency_destination').trigger('input')
